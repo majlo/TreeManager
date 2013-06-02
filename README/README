@@ -1,0 +1,31 @@
+Tree Manager
+============
+Web interface (module TreeManagerUI) for TreeManager allows creation and manipulation of multiple trees.
+
+REQUIREMENTS
+------------
+* Apache web server (tested on version 2.2.14 in Ubuntu)
+
+* mod_perl (tested on version 2.0.4)
+** example of mod_perl startup script is located in the same folder as this README (filename mod_perl-startup.pl)
+** example of virtual server configuration is located in the same folter as this README (filename apache-virtual-server)
+
+* MySQL
+** init file for table creation is located in the same folder as this README (filename database.init.sql)
+!! is neccessary to set up database credentials in the module Configuration.pm
+
+BUGS
+----
+Table representation of the Tree is broken in some cases.
+
+TODO (things that I wanted to do but was pressed for time)
+----
+* use javascript for user input verification, currently is verification done on the server side
+* create functionality for user for creation of database tables on the web UI in the case that database tables are not created yet
+* improve graphic design of the UI
+
+POSSIBLE IMPROVEMENTS (things that could be done better)
+---------------------
+* better error handling in the modules Node (possibly by setting some errorId+errorMsg instead of dying)
+* more abstraction in Tree and TreeStorage modules
+
